@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastros</title>
+</head>
+<body class="two">
+
+    <h2>Cadastros Salvos</h2>
+
+    <ol id="listaAprovados"></ol>
+
+    <button>
+        <a href="index.html">Voltar</a>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

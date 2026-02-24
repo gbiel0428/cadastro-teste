@@ -1,0 +1,38 @@
+// ===== SALVAR CADASTRO =====
+const botaoCadastrar = document.getElementById('btnCadastrar');
+
+if (botaoCadastrar) {
+    botaoCadastrar.addEventListener('click', function () {
+        const email = document.getElementById('novoAprovado').value;
+        const senha = document.getElementById('novaSenha').value;
+
+        if (email.trim() === "" || senha.trim() === "") {
+            alert("Preencha email e senha!");
+            return;
+        }
+
+        let cadastros = JSON.parse(localStorage.getItem("cadastros")) || [];
+
+        cadastros.push({ email, senha });
+
+        localStorage.setItem("cadastros", JSON.stringify(cadastros));
+
+        alert("Cadastro salvo com sucesso!");
+
+        document.getElementById('novoAprovado').value = "";
+        document.getElementById('novaSenha').value = "";
+    });
+}
+
+// ===== MOSTRAR CADASTROS =====
+const lista = document.getElementById('listaAprovados');
+
+if (lista) {
+    const cadastros = JSON.parse(localStorage.getItem("cadastros")) || [];
+
+    cadastros.forEach(function (item) {
+        const li = document.createElement('li');
+        li.textContent = `Email: ${item.email} | Senha: ${item.senha}`;
+        lista.appendChild(li);
+    });
+}

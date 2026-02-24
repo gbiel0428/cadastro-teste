@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro</title>
+</head>
+<body class="two">
+
+    <img src="assets/cadastro-logo.webp" alt="Cadastro imagem">
+
+    <div class="input-group">
+        <input type="text" id="novoAprovado" placeholder="Cadastre seu novo Email">
+        <input type="password" id="novaSenha" placeholder="Cadastre sua nova senha">
+        <button id="btnCadastrar">Cadastrar</button>
+    </div>
+
+    <button>
+        <a href="lista.html">Ver cadastros salvos</a>
+    </button>
+
+    <button>
+        <a href="Inicial.html">Página inicial</a>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
